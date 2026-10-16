@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For My Prettiest Makdi Basanti, Jannu & Baby 💖 | From Your Akashi Pakkshi</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Soft Ambient Glow Blobs -->
+  <div class="ambient-blobs" aria-hidden="true">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+
+  <!-- Interactive Floating Petals & Hearts Canvas -->
+  <canvas id="petals-canvas" aria-hidden="true"></canvas>
+
+  <!-- Sticky Top Bar: Love Meter, Pet-Name Switcher & Music Box -->
+  <header class="sticky-topbar">
+    <div class="topbar-inner">
+      <div class="love-meter-cluster">
+        <span class="love-meter-label">💖 Jannu's Happiness:</span>
+        <div class="love-meter-bar" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">
+          <div id="love-meter-fill" class="love-meter-fill"></div>
+        </div>
+        <span id="love-meter-text" class="love-meter-value">88%</span>
+      </div>
+
+      <div class="nickname-mode-cluster" aria-label="Switch what I call you">
+        <span class="nickname-mode-label">Call her:</span>
+        <button type="button" class="nick-pill-btn active" data-her-nick="Makdi Basanti">Makdi Basanti 🕷️💃</button>
+        <button type="button" class="nick-pill-btn" data-her-nick="Jannu">Jannu 💖</button>
+        <button type="button" class="nick-pill-btn" data-her-nick="Baby">Baby 🥺</button>
+      </div>
+
+      <button type="button" id="btn-music-box" class="music-btn" title="Play our romantic music box melody">
+        <span id="music-icon">🎵</span>
+        <span id="music-label">Play Our Melody</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="main-wrapper">
+
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="hero-copy">
+        <div class="hero-badge">
+          <span>💌</span>
+          <span>From your Akashi Pakkshi, Baby &amp; Baccha • For my Aarya</span>
+        </div>
+
+        <h1 class="hero-title">
+          Hey my prettiest <span class="highlight-nick dynamic-her-nick">Makdi Basanti</span>... will you go out with me &amp; be my girl forever? 🥺💖
+        </h1>
+
+        <p class="hero-lead">
+          To my sweet <strong>Jannu</strong>, my chaotic <strong>Makdi Basanti</strong>, and my softest <strong>Baby</strong> — I made this whole little universe of us because I love you a lottt. From our very first kiss at <strong>Cream Stone</strong> to every time I wrap my arms tight around your waist, you are literally the prettiest girl in the whole wide world.
+        </p>
+
+        <div class="hero-chips">
+          <span class="hero-chip">🐦 Your Akashi Pakkshi</span>
+          <span class="hero-chip">👶 Your Clingy Baccha</span>
+          <span class="hero-chip">🍨 First Kiss @ Cream Stone</span>
+          <span class="hero-chip">🫂 Waist &amp; Hug Obsessed</span>
+          <span class="hero-chip">🍕🍫✨ Pizza, Chocolates &amp; Jhumke</span>
+          <span class="hero-chip">🐱 Cute Cat Approved</span>
+        </div>
+
+        <div class="hero-cta-row">
+          <a href="#proposal-section" class="btn-primary-love">
+            <span>💍 Jump to the Big Question</span>
+          </a>
+          <a href="#scrapbook-section" class="btn-secondary-love">
+            <span>📸 Explore Our 9 Photos &amp; Memories</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 3-Photo Interactive Polaroid Stack -->
+      <div class="hero-polaroid-stage" aria-label="Featured photos of us">
+        <div class="hero-polaroid p-left" data-photo-index="5" title="Click to open photo">
+          <img src="assets/photos/photo6-cute-pout.jpg" alt="My prettiest girl pouting while I hold her waist">
+          <div class="hero-polaroid-caption">Prettiest Girl Alive 😍✨</div>
+        </div>
+
+        <div class="hero-polaroid p-center" data-photo-index="1" title="Click to open photo">
+          <img src="assets/photos/photo2-tight-hug.jpg" alt="Our tightest warm bear hug together">
+          <div class="hero-polaroid-caption">My Favorite Hugs 🫂💖</div>
+        </div>
+
+        <div class="hero-polaroid p-right" data-photo-index="3" title="Click to open photo">
+          <img src="assets/photos/photo4-holding-hands.jpg" alt="Holding hands tightly across the table">
+          <div class="hero-polaroid-caption">Cream Stone &amp; Us 🍨💋</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 1: OUR SECRET NICKNAME DICTIONARY -->
+    <section id="nicknames-section">
+      <div class="section-header">
+        <span class="section-kicker">🗣️ Our Cute Secret Language</span>
+        <h2 class="section-title">What You Call Me vs. What I Call You</h2>
+        <p class="section-subtitle">
+          Tap any nickname card below to hear why every single name we have for each other makes my heart melt!
+        </p>
+      </div>
+
+      <div class="nickname-grid">
+        <!-- Column A: What She Calls Me -->
+        <div class="nickname-column-card">
+          <div class="nickname-col-header">
+            <span class="nickname-col-icon">🐦💖</span>
+            <div>
+              <h3>What My Girl Calls Me</h3>
+              <p style="font-size: 0.85rem; color: var(--text-muted);">Every time these leave your lips, I fold immediately</p>
+            </div>
+          </div>
+
+          <div class="nickname-list">
+            <div class="nickname-item" data-toast="Chirp chirp! Your Akashi Pakkshi reports for hug duty! 🐦💖">
+              <div class="nickname-item-top">
+                <span class="nickname-tag">1. Akashi Pakkshi 🐦✨</span>
+                <span class="nickname-badge">Iconic #1</span>
+              </div>
+              <p style="font-size: 0.9rem; color: var(--text-muted);">
+                Your signature name for me! Even when I pretend to act cool or ragebait you, the moment you say <em>“akashi pakkshi”</em> I’m grinning from ear to ear.
+              </p>
+            </div>
+
+            <div class="nickname-item" data-toast="Yes baby, I'm all yours forever! 🥺💕">
+              <div class="nickname-item-top">
+                <span class="nickname-tag">2. Baby 🥺💗</span>
+                <span class="nickname-badge">Heart Melter</span>
+              </div>
+              <p style="font-size: 0.9rem; color: var(--text-muted);">
+                When you call me <em>“baby”</em> in your soft, sweet voice, 100% of my jealousy or stubbornness vanishes in 0.2 seconds flat.
+              </p>
+            </div>
+
+            <div class="nickname-item" data-toast="Your clingy baccha wants a tight waist hug right now! 👶🫂">
+              <div class="nickname-item-top">
+                <span class="nickname-tag">3. Baccha 👶🌸</span>
+                <span class="nickname-badge">So Soft</span>
+              </div>
+              <p style="font-size: 0.9rem; color: var(--text-muted);">
+                Because around you I really am just your clingy, dramatic, crazy-in-love <em>baccha</em> who just wants your attention 24/7!
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column B: What I Call Her -->
+        <div class="nickname-column-card">
+          <div class="nickname-col-header">
+            <span class="nickname-col-icon">👑🌷</span>
+            <div>
+              <h3>What I Call My Girl</h3>
+              <p style="font-size: 0.85rem; color: var(--text-muted);">Three names for the prettiest girl in the universe</p>
+            </div>
+          </div>
+
+          <div class="nickname-list">
+            <div class="nickname-item" data-toast="My cutest, most dramatic Makdi Basanti forever! 🕷️💃💖">
+              <div class="nickname-item-top">
+                <span class="nickname-tag">1. Makdi Basanti 🕷️💃</span>
+                <span class="nickname-badge">Legendary</span>
+              </div>
+              <p style="font-size: 0.9rem; color: var(--text-muted);">
+                My one and only <em>Makdi Basanti</em>! Playful, dramatic, adorable, and the best person in the world to tease and then shower with kisses.
+              </p>
+            </div>
+
+            <div class="nickname-item" data-toast="Jannu = My whole heart & soul! 💓✨">
+              <div class="nickname-item-top">
+                <span class="nickname-tag">2. Jannu 💕✨</span>
+                <span class="nickname-badge">My Life</span>
+              </div>
+              <p style="font-size: 0.9rem; color: var(--text-muted);">
+                Because you literally are my <em>jaan</em>, my safe place, my favorite notification, and the girl I love a lottt more than words can say.
+              </p>
+            </div>
+
+            <div class="nickname-item" data-toast="My pretty emotional baby is always safe in my arms! 🥰🫂">
+              <div class="nickname-item-top">
+                <span class="nickname-tag">3. Baby 🥰🌸</span>
+                <span class="nickname-badge">Precious</span>
+              </div>
+              <p style="font-size: 0.9rem; color: var(--text-muted);">
+                My sweet, emotional, understanding <em>baby</em> who deserves endless chocolates, hot pizzas, pretty jhumke, and a million forehead kisses.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: THE 1,000,000x "YOU'RE SO PRETTY" LIVE SPAMMER -->
+    <section id="pretty-counter-section">
+      <div class="pretty-counter-card">
+        <span class="section-kicker">😍 Daily Compliment Tracker</span>
+        <h2 class="section-title">Times I've Called You "Pretty" Today</h2>
+        <p class="section-subtitle">
+          I call you pretty like a million times in a day because you genuinely are <strong>THE PRETTIEST</strong> girl to ever exist. Help me cross 1,000,000 right now, <span class="dynamic-her-nick">Makdi Basanti</span>!
+        </p>
+
+        <div id="pretty-odometer" class="pretty-odometer" aria-live="polite">999,995</div>
+
+        <div id="pretty-milestone-banner" class="pretty-milestone-banner">
+          <span>👑</span>
+          <span>1,000,000+ PRETTY MILESTONE UNLOCKED! Officially the Prettiest Girl in the Universe! ✨</span>
+        </div>
+
+        <div id="pretty-live-compliment" class="pretty-live-compliment">
+          “You are the prettiest, most gorgeous girl alive, my Jannu! 💖”
+        </div>
+
+        <div class="pretty-buttons-wrap">
+          <button type="button" id="btn-pretty-once" class="btn-primary-love">
+            ✨ Tell Her “You're So Pretty!” (+1)
+          </button>
+          <button type="button" id="btn-pretty-turbo" class="btn-secondary-love">
+            🚀 Toggle Turbo “Pretty” Spam
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: FULL 9-PHOTO POLAROID SCRAPBOOK (WAIST, HUGS, CREAM STONE, PRETTIEST, CAT) -->
+    <section id="scrapbook-section">
+      <div class="section-header">
+        <span class="section-kicker">📸 All 9 Favorite Moments of Us</span>
+        <h2 class="section-title">Hugs, Your Waist, Your Curls &amp; Our Memories</h2>
+        <p class="section-subtitle">
+          Every single photo of us shows how obsessed I am with hugging you and holding your waist. Tap any photo to open it full screen or send extra hearts!
+        </p>
+      </div>
+
+      <div class="gallery-filter-bar" role="tablist" aria-label="Filter our photos">
+        <button type="button" class="filter-pill active" data-filter="all">All 9 Photos ✨</button>
+        <button type="button" class="filter-pill" data-filter="hugs">Tight Hugs 🫂</button>
+        <button type="button" class="filter-pill" data-filter="waist">Loving Your Waist 🔥</button>
+        <button type="button" class="filter-pill" data-filter="prettiest">Prettiest Girl &amp; Us 😍</button>
+        <button type="button" class="filter-pill" data-filter="cat">Your Cute Cat 🐱</button>
+      </div>
+
+      <div class="scrapbook-grid" id="scrapbook-grid">
+        <!-- Photo 1 -->
+        <article class="scrapbook-polaroid" data-category="hugs prettiest" data-photo-index="0">
+          <div class="washi-tape"></div>
+          <div class="polaroid-img-frame">
+            <img src="assets/photos/photo1-cozy-selfie.jpg" alt="Cozy selfie of us sitting close together">
+            <span class="polaroid-tag-pill">🥰 Cozy Us</span>
+          </div>
+          <h3 class="polaroid-title">Tangled Up With My Jannu 💕</h3>
+          <p class="polaroid-story">
+            Sitting right next to you with my arms wrapped around my girl. Whether you call me Akashi Pakkshi or Baccha, right beside you is my favorite spot on earth.
+          </p>
+          <div class="polaroid-footer">
+            <button type="button" class="btn-heart-photo">❤️ <span class="heart-count">143</span></button>
+            <button type="button" class="btn-view-photo" data-photo-index="0">View Full Photo 🔍</button>
+          </div>
+        </article>
+
+        <!-- Photo 2 -->
+        <article class="scrapbook-polaroid" data-category="hugs waist" data-photo-index="1">
+          <div class="washi-tape"></div>
+          <div class="polaroid-img-frame">
+            <img src="assets/photos/photo2-tight-hug.jpg" alt="Hugging each other tightly with my hand on your waist">
+            <span class="polaroid-tag-pill">🫂 Tightest Hug</span>
+          </div>
+          <h3 class="polaroid-title">How Much I Love Hugging You 🫂💖</h3>
+          <p class="polaroid-story">
+            Look at how tightly we’re holding each other! Wrapping my arms around you and resting my hand on your waist makes every single worry disappear instantly.
+          </p>
+          <div class="polaroid-footer">
+            <button type="button" class="btn-heart-photo">❤️ <span class="heart-count">999</span></button>
+            <button type="button" class="btn-view-photo" data-photo-index="1">View Full Photo 🔍</button>
+          </div>
+        </article>
+
+        <!-- Photo 3 -->
+        <article class="scrapbook-polaroid" data-category="waist hugs" data-photo-index="2">
+          <div class="washi-tape"></div>
+          <div class="polaroid-img-frame">
+            <img src="assets/photos/photo3-waist-close.jpg" alt="Close up of my hand holding her waist">
+            <span class="polaroid-tag-pill">🔥 Waist Obsessed</span>
+          </div>
+          <h3 class="polaroid-title">Obsessed With Your Waist 🥺✨</h3>
+          <p class="polaroid-story">
+            I’m not even hiding it — I love your waist so much! My hands were literally custom-made to hold your waist and pull you close to me, baby.
+          </p>
+          <div class="polaroid-footer">
+            <button type="button" class="btn-heart-photo">❤️ <span class="heart-count">777</span></button>
+            <button type="button" class="btn-view-photo" data-photo-index="2">View Full Photo 🔍</button>
+          </div>
+        </article>
+
+        <!-- Photo 4 -->
+        <article class="scrapbook-polaroid" data-category="prettiest" data-photo-index="3">
+          <div class="washi-tape"></div>
+          <div class="polaroid-img-frame">
+            <img src="assets/photos/photo4-holding-hands.jpg" alt="Our hands intertwined across the table">
+            <span class="polaroid-tag-pill">🍨 Cream Stone Vibes</span>
+          </div>
+          <h3 class="polaroid-title">Holding Hands &amp; Cream Stone Kisses 💋</h3>
+          <p class="polaroid-story">
+            Fingers locked across the table and never wanting to let go. Reminds me of our first kiss at Cream Stone when my heart was beating at 10,000 mph!
+          </p>
+          <div class="polaroid-footer">
+            <button type="button" class="btn-heart-photo">❤️ <span class="heart-count">520</span></button>
+            <button type="button" class="btn-view-photo" data-photo-index="3">View Full Photo 🔍</button>
+          </div>
+        </article>
+
+        <!-- Photo 5 -->
+        <article class="scrapbook-polaroid" data-category="waist hugs" data-photo-index="4">
+          <div class="washi-tape"></div>
+          <div class="polaroid-img-frame">
+            <img src="assets/photos/photo5-waist-hug.jpg" alt="Hugging her waist from behind">
+            <span class="polaroid-tag-pill">💞 Locked In</span>
+          </div>
+          <h3 class="polaroid-title">Both Hands Around My Baby 🫶</h3>
+          <p class="polaroid-story">
+            Hugging you from behind with both hands locked right around your waist. You fit so effortlessly in my arms, my sweet Makdi Basanti.
+          </p>
+          <div class="polaroid-footer">
+            <button type="button" class="btn-heart-photo">❤️ <span class="heart-count">888</span></button>
+            <button type="button" class="btn-view-photo" data-photo-index="4">View Full Photo 🔍</button>
+          </div>
+        </article>
+
+        <!-- Photo 6 -->
+        <article class="scrapbook-polaroid" data-category="prettiest waist" data-photo-index="5">
+          <div class="washi-tape"></div>
+          <div class="polaroid-img-frame">
+            <img src="assets/photos/photo6-cute-pout.jpg" alt="Her adorable pouty blep face while I hold her waist">
+            <span class="polaroid-tag-pill">😍 Cutest Pout</span>
+          </div>
+          <h3 class="polaroid-title">The Prettiest Girl in the World 👑</h3>
+          <p class="polaroid-story">
+            Look at that adorable face and your pretty curls while my hand is right on your waist! How could I NOT call you pretty a million times a day?!
+          </p>
+          <div class="polaroid-footer">
+            <button type="button" class="btn-heart-photo">❤️ <span class="heart-count">1000</span></button>
+            <button type="button" class="btn-view-photo" data-photo-index="5">View Full Photo 🔍</button>
+          </div>
+        </article>
+
+        <!-- Photo 7 -->
+        <article class="scrapbook-polaroid" data-category="hugs waist prettiest" data-photo-index="6">
+          <div class="washi-tape"></div>
+          <div class="polaroid-img-frame">
+            <img src="assets/photos/photo7-curls-hug.jpg" alt="High angle selfie of her curls and my arms around her waist">
+            <span class="polaroid-tag-pill">🌸 Curls &amp; Cuddles</span>
+          </div>
+          <h3 class="polaroid-title">Your Pretty Curls + My Warm Hugs 🌷</h3>
+          <p class="polaroid-story">
+            Every time we meet, all your baccha wants to do is hold you from behind, breathe in your warmth, and remind you how deeply I love you.
+          </p>
+          <div class="polaroid-footer">
+            <button type="button" class="btn-heart-photo">❤️ <span class="heart-count">654</span></button>
+            <button type="button" class="btn-view-photo" data-photo-index="6">View Full Photo 🔍</button>
+          </div>
+        </article>
+
+        <!-- Photo 8 -->
+        <article class="scrapbook-polaroid" data-category="waist hugs" data-photo-index="7">
+          <div class="washi-tape"></div>
+          <div class="polaroid-img-frame">
+            <img src="assets/photos/photo8-back-hug.jpg" alt="Close back hug holding her waist upright">
+            <span class="polaroid-tag-pill">🥺 Clingy Baccha</span>
+          </div>
+          <h3 class="polaroid-title">Never Letting Go of Your Waist 💗</h3>
+          <p class="polaroid-story">
+            Official proof that my hands have a permanent magnet pulling them straight to your waist whenever I’m within 5 feet of my Jannu!
+          </p>
+          <div class="polaroid-footer">
+            <button type="button" class="btn-heart-photo">❤️ <span class="heart-count">912</span></button>
+            <button type="button" class="btn-view-photo" data-photo-index="7">View Full Photo 🔍</button>
+          </div>
+        </article>
+
+        <!-- Photo 9: Her Cute Cat -->
+        <article class="scrapbook-polaroid" data-category="cat" data-photo-index="8">
+          <div class="washi-tape"></div>
+          <div class="polaroid-img-frame">
+            <img src="assets/photos/cat.jpeg" alt="Her cute fluffy grey cat with a giant floofy tail">
+            <span class="polaroid-tag-pill">🐱 Floof Royalty</span>
+          </div>
+          <h3 class="polaroid-title">Your Super Cute Fluffy Kitty! 🐾</h3>
+          <p class="polaroid-story">
+            Look at that majestic grey floof and that giant fluffy tail! Second cutest living being on the planet — right after her prettiest mommy, my Jannu!
+          </p>
+          <div class="polaroid-footer">
+            <button type="button" class="btn-heart-photo">❤️ <span class="heart-count">850</span></button>
+            <button type="button" class="btn-view-photo" data-photo-index="8">View Full Photo 🔍</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SECTION 4: FIRST KISS AT CREAM STONE SPOTLIGHT -->
+    <section id="cream-stone-section">
+      <div class="cream-stone-card">
+        <div class="cream-stone-visual">
+          <div class="cream-stone-photo-wrap">
+            <img src="assets/photos/photo4-holding-hands.jpg" alt="Holding hands together at our table">
+            <p style="font-family: var(--font-hand); font-size: 1.35rem; color: var(--rose-800); text-align: center; margin-top: 0.55rem;">
+              Where magic happened: Cream Stone 🍨💋
+            </p>
+          </div>
+          <div class="cream-stone-scoops-stage" id="cream-stone-icons" aria-hidden="true">
+            <span>🍨</span><span>✨</span><span>💋</span><span>✨</span><span>🍦</span>
+          </div>
+        </div>
+
+        <div class="cream-stone-copy">
+          <span class="section-kicker">🍨💋 Core Memory Unlocked</span>
+          <h2 class="section-title" style="text-align: start;">Our First Kiss at Cream Stone</h2>
+          <p>
+            Of all the places in the world, <strong>Cream Stone</strong> will forever be legendary for us because that’s where we shared our <strong>very first kiss</strong>! Even the sweetest ice cream and chocolate fudge there couldn't compete with how sweet kissing my <span class="dynamic-her-nick">Makdi Basanti</span> felt.
+          </p>
+          <blockquote class="kiss-memory-note">
+            “My heart was racing so fast, baby... and from that first kiss at Cream Stone to right now, every single day has made me fall even harder in love with you.”
+          </blockquote>
+          <button type="button" id="btn-cream-stone-kiss" class="btn-primary-love">
+            🍨💋 Relive Our Cream Stone First Kiss!
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: RAGEBAIT vs. SORRY SPAM CHAT SIMULATOR -->
+    <section id="chat-simulator-section">
+      <div class="section-header">
+        <span class="section-kicker">📱 Our Daily Dynamic</span>
+        <h2 class="section-title">When I Ragebait You vs. My Legendary “Sorry Spam”</h2>
+        <p class="section-subtitle">
+          Yes, I ragebait you a lot because your reactions are adorable... and yes, you’re emotional and you LOVE my unstoppable <strong>sorry spam</strong> when I try to convince my baby! Try both buttons below:
+        </p>
+      </div>
+
+      <div class="chat-sim-container">
+        <div class="chat-sim-header">
+          <div class="chat-contact-info">
+            <img src="assets/photos/photo6-cute-pout.jpg" alt="Jannu Avatar" class="chat-avatar">
+            <div>
+              <div class="chat-contact-name">My Prettiest <span class="dynamic-her-nick">Makdi Basanti</span> 💖</div>
+              <div class="chat-contact-sub">Online • Calling me Akashi Pakkshi, Baby &amp; Baccha</div>
+            </div>
+          </div>
+          <div id="chat-mood-pill" class="chat-mood-pill">Mood: Happy Baby 🥰</div>
+        </div>
+
+        <div id="chat-messages-viewport" class="chat-messages-viewport" aria-live="polite">
+          <div class="chat-bubble incoming">
+            <span class="chat-bubble-sender">Makdi Basanti 💖</span>
+            Oye akashi pakkshi! Why are you staring at me like that, baccha? 🥺
+          </div>
+          <div class="chat-bubble outgoing">
+            <span class="chat-bubble-sender">Akashi Pakkshi 🐦</span>
+            Just reminding my jannu for the 999,999th time today that she is the prettiest girl alive 😍💖
+          </div>
+          <div class="chat-bubble incoming">
+            <span class="chat-bubble-sender">Makdi Basanti 💖</span>
+            Hehe I love you baby 🥺❤️ Don't try to ragebait me today okay!!
+          </div>
+        </div>
+
+        <div class="chat-sim-controls">
+          <div class="convince-meter-row">
+            <span>🥺 Jannu Convinced &amp; Smiling Meter:</span>
+            <div class="convince-track">
+              <div id="convince-fill" class="convince-fill" style="width: 100%;"></div>
+            </div>
+            <span id="convince-percent">100%</span>
+          </div>
+
+          <div class="chat-action-buttons">
+            <button type="button" id="btn-do-ragebait" class="btn-ragebait">
+              😜 Ragebait Makdi Basanti
+            </button>
+            <button type="button" id="btn-do-sorry-spam" class="btn-sorry-spam">
+              🥺💌 UNLEASH THE SORRY SPAM (x15 Burst!)
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: HER FAVORITES STARTER PACK (CHOCOLATES, PIZZAS, JHUMKE, CUTE CAT) -->
+    <section id="favorites-section">
+      <div class="section-header">
+        <span class="section-kicker">🎁 Things My Girl Loves</span>
+        <h2 class="section-title">The <span class="dynamic-her-nick">Makdi Basanti</span> Happiness Starter Pack</h2>
+        <p class="section-subtitle">
+          I know the exact recipe to make my emotional baby beam with happiness: hot cheesy pizzas, sweet chocolates, pretty jhumke, and cuddles with her cute cat!
+        </p>
+      </div>
+
+      <div class="favorites-grid">
+        <!-- Card 1: Pizzas -->
+        <div class="favorite-card">
+          <div class="favorite-icon-stage" id="pizza-stage">🍕🧀</div>
+          <h3>Hot Cheesy Pizzas</h3>
+          <p style="font-size: 0.9rem; color: var(--text-muted);">
+            Because nothing beats feeding my Jannu the cheesiest slice of pizza first (and promising not to steal your crust!).
+          </p>
+          <span id="pizza-counter-pill" class="favorite-status-pill">Slices Served: 0 🍕</span>
+          <button type="button" id="btn-give-pizza" class="btn-secondary-love" style="width: 100%; justify-content: center;">
+            🍕 Feed Jannu a Pizza Slice
+          </button>
+        </div>
+
+        <!-- Card 2: Chocolates -->
+        <div class="favorite-card">
+          <div class="favorite-icon-stage" id="choco-stage">🍫💝</div>
+          <h3>Unlimited Chocolates</h3>
+          <p style="font-size: 0.9rem; color: var(--text-muted);">
+            You love chocolates so much, baby — and even the richest silk chocolate is still only half as sweet as you are.
+          </p>
+          <span id="choco-counter-pill" class="favorite-status-pill">Chocolates Unwrapped: 0 🍫</span>
+          <button type="button" id="btn-give-choco" class="btn-secondary-love" style="width: 100%; justify-content: center;">
+            🍫 Unwrap Chocolate + Note
+          </button>
+        </div>
+
+        <!-- Card 3: Jhumke -->
+        <div class="favorite-card">
+          <div class="favorite-icon-stage">
+            <!-- Custom Cute Animated SVG Jhumka -->
+            <svg id="jhumka-svg" class="jhumka-svg" viewBox="0 0 120 120" aria-label="Pretty Golden Jhumka Earring">
+              <circle cx="60" cy="18" r="9" fill="#f59e0b" stroke="#b45309" stroke-width="2.5"/>
+              <circle cx="60" cy="18" r="4" fill="#ec4899"/>
+              <line x1="60" y1="27" x2="60" y2="42" stroke="#d97706" stroke-width="4" stroke-linecap="round"/>
+              <path d="M 32 72 Q 60 36 88 72 Z" fill="#fbbf24" stroke="#b45309" stroke-width="2.5"/>
+              <path d="M 36 72 L 84 72" stroke="#ec4899" stroke-width="3.5"/>
+              <!-- Hanging ghungroo beads -->
+              <line x1="36" y1="72" x2="34" y2="86" stroke="#d97706" stroke-width="2"/>
+              <circle cx="34" cy="90" r="4.5" fill="#f59e0b" stroke="#b45309" stroke-width="1.5"/>
+              <line x1="48" y1="72" x2="47" y2="89" stroke="#d97706" stroke-width="2"/>
+              <circle cx="47" cy="93" r="4.5" fill="#ec4899" stroke="#be185d" stroke-width="1.5"/>
+              <line x1="60" y1="72" x2="60" y2="91" stroke="#d97706" stroke-width="2"/>
+              <circle cx="60" cy="95" r="5" fill="#f59e0b" stroke="#b45309" stroke-width="1.5"/>
+              <line x1="72" y1="72" x2="73" y2="89" stroke="#d97706" stroke-width="2"/>
+              <circle cx="73" cy="93" r="4.5" fill="#ec4899" stroke="#be185d" stroke-width="1.5"/>
+              <line x1="84" y1="72" x2="86" y2="86" stroke="#d97706" stroke-width="2"/>
+              <circle cx="86" cy="90" r="4.5" fill="#f59e0b" stroke="#b45309" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <h3>Pretty Jhumke ✨</h3>
+          <p style="font-size: 0.9rem; color: var(--text-muted);">
+            You love jhumke, and seeing jhumke sway beside your pretty cheeks and curls makes your Akashi Pakkshi lose his mind!
+          </p>
+          <span id="jhumka-status-pill" class="favorite-status-pill">Tap to Jingle Jhumke 🔔</span>
+          <button type="button" id="btn-jingle-jhumka" class="btn-secondary-love" style="width: 100%; justify-content: center;">
+            ✨ Gift &amp; Jingle Jhumke
+          </button>
+        </div>
+
+        <!-- Card 4: Her Cute Cat -->
+        <div class="favorite-card">
+          <div class="favorite-icon-stage">
+            <img src="assets/photos/cat.jpeg" alt="Her cute fluffy cat" class="cat-real-photo-circle">
+          </div>
+          <h3>Your Cute Fluffy Cat 🐱</h3>
+          <p style="font-size: 0.9rem; color: var(--text-muted);">
+            Your majestic floofy cat is part of the package! Tap below to pet her and hear a real gentle kitty purr.
+          </p>
+          <span id="cat-status-pill" class="favorite-status-pill">Floof Mood: Purring 🐾</span>
+          <button type="button" id="btn-pet-kitty" class="btn-secondary-love" style="width: 100%; justify-content: center;">
+            🐾 Pet Kitty (Hear Purr!)
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: MY HONEST CONFESSIONS & LOVE LETTER (JEALOUSY, UNDERSTANDING, EMOTIONAL, WAIST & HUGS) -->
+    <section id="confessions-section">
+      <div class="section-header">
+        <span class="section-kicker">💌 Real Talk From Your Baccha</span>
+        <h2 class="section-title">Why We Love Each Other A Lottt</h2>
+        <p class="section-subtitle">
+          Every little quirk about us — my jealousy, my ragebaits, your emotional heart, and how understanding you always are — makes us perfect together.
+        </p>
+      </div>
+
+      <div class="confessions-grid">
+        <div class="confession-card">
+          <span class="confession-emoji">😤➡️🥺</span>
+          <h3>Yes, I Get Jealous Many Times</h3>
+          <p style="font-size: 0.92rem; color: var(--text-muted);">
+            I admit it! I do get jealous many times — only because you are literally the prettiest girl in the world and your possessive Akashi Pakkshi wants all your smiles, hugs, and attention for himself.
+          </p>
+        </div>
+
+        <div class="confession-card">
+          <span class="confession-emoji">🕊️💖</span>
+          <h3>You Are So Understanding</h3>
+          <p style="font-size: 0.92rem; color: var(--text-muted);">
+            Even when I get jealous or act like a silly baccha, you are always so calm, patient, and understanding with me. You know my heart better than anyone else ever could.
+          </p>
+        </div>
+
+        <div class="confession-card">
+          <span class="confession-emoji">🥺🫂</span>
+          <h3>My Emotional Baby's Safe Place</h3>
+          <p style="font-size: 0.92rem; color: var(--text-muted);">
+            I love how soft and emotional your heart is, Jannu. Whenever you feel overwhelmed or emotional, I will spam sorry a thousand times and hold you tight until you smile.
+          </p>
+        </div>
+
+        <div class="confession-card">
+          <span class="confession-emoji">🔥🤍</span>
+          <h3>Your Waist + My Hugs = Forever</h3>
+          <p style="font-size: 0.92rem; color: var(--text-muted);">
+            Hugging you tightly and holding your waist is my favorite addiction. We love each other a lottt, and I never want to stop holding you close.
+          </p>
+        </div>
+      </div>
+
+      <div class="love-letter-box">
+        <div class="letter-salutation">My dearest Makdi Basanti, my Jannu, my Baby,</div>
+        <div class="letter-body-paragraphs">
+          <p>
+            Whenever you call me <strong>akashi pakkshi</strong>, <strong>baby</strong>, or your <strong>baccha</strong>, my whole day instantly lights up. I know I ragebait you a lot just to see your cute expressions, and I know I get jealous many times because I’m so crazy about you — yet through it all, you are so wonderfully <strong>understanding</strong>, gentle, and loving with me.
+          </p>
+          <p>
+            I love everything about you, baby. I love how emotional and genuine you are, how your eyes light up over <strong>chocolates</strong>, <strong>pizzas</strong>, and pretty <strong>jhumke</strong>, how adorable your <strong>cute cat</strong> is, and how you melt whenever I send you my <strong>sorry spam</strong> to convince you.
+          </p>
+          <p>
+            I call you <strong>pretty like a million times a day</strong> because one look at you still gives me the exact same butterflies I felt when <strong>we kissed for the first time at Cream Stone</strong>. I love hugging you so tight, I love holding your waist, and most of all, I love <em>you</em> a lottt.
+          </p>
+        </div>
+        <div class="letter-signoff">
+          Forever yours,<br>
+          Your Akashi Pakkshi, Baby &amp; Baccha ❤️
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 8: THE PROPOSAL FINALE ("ASKING HER OUT") -->
+    <section id="proposal-section">
+      <div class="proposal-card">
+        <span class="section-kicker">💍✨ The Moment of Truth</span>
+        <h2 class="proposal-question-title">
+          My Prettiest <span class="dynamic-her-nick">Makdi Basanti</span>, My Jannu, My Baby... Will You Go Out With Me &amp; Be My Girl? 🥺💖
+        </h2>
+        <p class="section-subtitle">
+          First, tap all the things you want included in our next official date (spoiler: your Baccha is giving you ALL of them anyway!):
+        </p>
+
+        <div class="date-builder-grid" id="date-builder-grid" role="group" aria-label="Select date activities">
+          <button type="button" class="date-activity-chip selected" data-activity="🍕 Hot Cheesy Pizza Date">🍕 Hot Cheesy Pizza Date</button>
+          <button type="button" class="date-activity-chip selected" data-activity="🍨 Cream Stone Ice Cream & Kisses">🍨 Cream Stone Ice Cream &amp; Kisses</button>
+          <button type="button" class="date-activity-chip selected" data-activity="🍫 Chocolate Overload">🍫 Chocolate Overload</button>
+          <button type="button" class="date-activity-chip selected" data-activity="✨ Pretty Jhumke Shopping">✨ Pretty Jhumke Shopping</button>
+          <button type="button" class="date-activity-chip selected" data-activity="🫂 Endless Tight Hugs & Waist Holds">🫂 Endless Tight Hugs &amp; Waist Holds</button>
+          <button type="button" class="date-activity-chip selected" data-activity="🐱 Cuddles With Your Cute Cat">🐱 Cuddles With Your Cute Cat</button>
+        </div>
+
+        <div id="dodge-tease-msg" class="dodge-tease-msg">
+          “Say YES to your Akashi Pakkshi, baby! 🥺👉👈”
+        </div>
+
+        <div class="proposal-buttons-stage">
+          <button type="button" id="btn-say-yes" class="btn-proposal-yes">
+            💖 YES! A Million Times YES, My Akashi Pakkshi! ✨
+          </button>
+          <button type="button" id="btn-say-no" class="btn-proposal-no">
+            😤 No, spam sorry first!
+          </button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- PHOTO LIGHTBOX MODAL -->
+  <div id="lightbox-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="lightbox-title">
+    <div class="modal-card">
+      <button type="button" id="btn-close-lightbox" class="modal-close-btn" aria-label="Close photo viewer">✕</button>
+      <img id="lightbox-img" class="lightbox-img" src="assets/photos/photo2-tight-hug.jpg" alt="Memory photo">
+      <h3 id="lightbox-title" style="font-family: var(--font-hand); font-size: 1.85rem; color: var(--rose-800);">Our Memory</h3>
+      <p id="lightbox-caption" style="font-size: 0.95rem; color: var(--text-muted);"></p>
+      <div class="lightbox-nav-row">
+        <button type="button" id="btn-prev-photo" class="btn-secondary-love">⬅️ Prev</button>
+        <button type="button" id="btn-next-photo" class="btn-secondary-love">Next ➡️</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- CELEBRATION & OFFICIAL DATE PASS MODAL (WHEN SHE SAYS YES!) -->
+  <div id="celebration-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="celebration-heading">
+    <div class="modal-card">
+      <button type="button" id="btn-close-celebration" class="modal-close-btn" aria-label="Close celebration modal">✕</button>
+      <div style="font-size: 3rem;">🎉💖💍🍨🫂</div>
+      <h2 id="celebration-heading" style="font-size: 2rem; color: var(--rose-800);">
+        SHE SAID YES!! 😭💖✨
+      </h2>
+      <p style="font-size: 1rem; color: var(--text-main);">
+        You just made your <strong>Akashi Pakkshi</strong> (your <strong>Baby</strong> &amp; <strong>Baccha</strong>) the happiest boy in the entire universe! I love you a lottt, my prettiest <strong>Makdi Basanti / Jannu / Baby</strong>!
+      </p>
+
+      <div class="certificate-box">
+        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px dashed var(--rose-300); padding-bottom: 0.45rem;">
+          <strong style="color: var(--rose-800); font-family: var(--font-display);">🎟️ OFFICIAL FOREVER DATE &amp; LOVE PASS</strong>
+          <span style="font-size: 0.78rem; font-weight: 800; color: var(--rose-600);">VALID: FOREVER ♾️</span>
+        </div>
+
+        <div class="certificate-photos-strip">
+          <img src="assets/photos/photo2-tight-hug.jpg" alt="Tight hug">
+          <img src="assets/photos/photo6-cute-pout.jpg" alt="Cute pout">
+          <img src="assets/photos/photo4-holding-hands.jpg" alt="Holding hands">
+          <img src="assets/photos/photo3-waist-close.jpg" alt="Holding waist">
+          <img src="assets/photos/cat.jpeg" alt="Cute cat">
+        </div>
+
+        <p style="font-size: 0.88rem;"><strong>👑 The Prettiest Girl:</strong> Aarya (Makdi Basanti • Jannu • Baby)</p>
+        <p style="font-size: 0.88rem;"><strong>🐦 Her Boy:</strong> Ansh (Akashi Pakkshi • Baby • Baccha)</p>
+        <p style="font-size: 0.88rem;"><strong>💋 First Kiss Landmark:</strong> Cream Stone 🍨</p>
+        <p style="font-size: 0.88rem;"><strong>✨ Locked-In Date Plan:</strong> <span id="certificate-activities-list">Pizza, Chocolates, Jhumke, Cream Stone, Waist Hugs &amp; Kitty Cuddles!</span></p>
+        <p style="font-size: 0.88rem;"><strong>💝 Lifetime Guarantees:</strong> 1,000,000 “You’re Pretty”s per day, unlimited sorry spam whenever you’re emotional, endless tight waist hugs, and loving each other a lottt forever.</p>
+      </div>
+
+      <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center;">
+        <button type="button" id="btn-more-confetti" class="btn-primary-love">
+          🎉 Burst More Hearts &amp; Confetti!
+        </button>
+        <button type="button" id="btn-done-celebration" class="btn-secondary-love">
+          🫂 Come Hug Your Baccha Now!
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Confetti Library (Local + CDN fallback) -->
+  <script src="assets/confetti.min.js"></script>
+  <script>
+    if (!window.confetti) {
+      document.write('<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"><\/script>');
+    }
+  </script>
+  <script src="js/audio.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
